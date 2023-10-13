@@ -1,0 +1,49 @@
+body{
+    background-color: #5840f8;
+}
+
+.container{
+    border: 1px solid;
+    width: 450px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(75, 138, 193);
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+h1{
+    color: rgb(5, 5, 86);
+}
+.screen{
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+input{
+    margin-bottom: 15px;
+    width: 90%;
+    height: 40px;
+    border: none;
+}
+
+button{
+    margin: 10px;
+    background-color: skyblue;
+    color: white;
+    width: 120px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+
+}
+
+.import{
+    margin-top: 10px;
+}
