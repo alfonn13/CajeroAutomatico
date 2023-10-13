@@ -8,7 +8,8 @@ body{
     height: 400px;
     text-align: center;
     margin: 0 auto;
-    background-color: rgb(75, 138, 193);
+    background: linear-gradient(to right, rgb(75, 138, 193), rgb(29, 80, 125));
+    
     margin-top: 50px;
     border-radius: 8px;
 }

@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     retirar.addEventListener("click", () => {
         const cantidad = parseFloat(input.value);
 
-        if (!isNaN(cantidad) && saldo > 0) {
+        if (!isNaN(cantidad) || saldo > 0 || cantidad<=0) {
             if (saldo >= cantidad) {
                 saldo -= cantidad;
-                saldoDisplay.textContent = `Saldo: ${saldo}`;
+                actulizarSaldo();
                 importe.textContent = `Retirado: ${cantidad}`;
             } else {
                 importe.textContent = `No hay saldo suficiente para retirar.`;
@@ -26,14 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     depositar.addEventListener("click",()=>{
         const cantidad = parseFloat(input.value);
 
-        if (!isNaN(cantidad)) {
+        if (!isNaN(cantidad) || cantidad >0) {
             saldo += cantidad;
-            saldoDisplay.textContent = `Saldo: ${saldo}`;
+            actulizarSaldo();
             importe.textContent = `Ingresado: ${cantidad}`;   
         } else {
             console.log("Ingrese un valor válido");
         }
     });
+
+    const actulizarSaldo = () =>{
+        saldoDisplay.textContent = `Saldo: ${saldo}`;
+    }
 
 
 });
